@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, CssBaseline } from "@mui/material";
+import { containerStyle } from "./theme/customStyles";
+import WeatherBox from "./pages/WeatherBox";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Container sx={containerStyle}>
+        <WeatherBox />
+      </Container>
+    </>
   );
-}
+};
 
 export default App;
